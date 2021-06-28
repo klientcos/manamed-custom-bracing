@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-
 const GlobalStyles = createGlobalStyle`
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;800;900&family=Rubik:wght@800&display=swap");
@@ -21,7 +20,7 @@ html {
 body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-    line-heightL 1.6;
+    line-height: 1.6;
     font-size: 1.6rem;
     background: #F9F9F9;
     color: #333;
@@ -30,31 +29,27 @@ body {
 export default GlobalStyles;
 
 export const Container = styled.div`
-    margin: 0 auto;
-    paddingL 0 50px;
-    max-width: 1300px;
-    width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1300px;
+  width: 100%;
 
-    //insert mobile responsive code here
-    `;
+  //insert mobile responsive code here
+`;
 
-    export const Button = styled.button`
-        border-radius: ${({bigRadius}) => bigRadius ? '30px': '20px'};
-        background-color: ${({primary}) => primary? '#d5e306': '#000'};
-        color: ${({primary}) => primary ? '#000': '#fff'};
-        padding: ${({big}) => big? '18px 30px' : '10px 28px'};
-        font-size: ${({bigFont}) => bigFont? '20px': '18px'};
-        outline: none;
-        cursor: pointer;
-        border: none;
-        transition: all .5s ease;
-        
-        &:hover{
-            background-color: ${({primary}) => primary? '#fff': '#E38B06'};  
-            color: #000;
-        }
- 
-        
-    `;
+export const Button = styled.button`
+  border-radius: ${({ bigRadius }) => (bigRadius ? "30px" : "20px")};
+  background-color: ${({ primary }) => (primary ? "#d5e306" : "#000")};
+  color: ${({ primary }) => (primary ? "#000" : "#fff")};
+  padding: ${({ big }) => (big ? "18px 30px" : "10px 28px")};
+  font-size: ${({ bigFont }) => (bigFont ? "20px" : "18px")};
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
 
-export const OutlineButton = styled.button``;
+  &:hover {
+    background-color: ${({ primary }) => (primary ? "#fff" : "#E38B06")};
+    color: #000;
+  }
+`;

@@ -1,13 +1,13 @@
-import { Works, Welcome } from "../../components";
-
+import { Works, Features, Product } from "../../components";
 
 function Home() {
-    return (
-        <div>
-            <Works />
-            <Welcome />
-        </div>
-    )
+  return (
+    <div>
+      <Features />
+      <Works />
+      <Product />
+    </div>
+  );
 }
 
 export default Home;
